@@ -1,0 +1,62 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #ffe6f0, #ffe6fa);
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  text-align: center;
+  position: relative;
+}
+
+.lovyu-text {
+  font-size: 4rem;
+  color: pink;
+  text-shadow: 2px 2px 4px white;
+  animation: pop 2s infinite alternate;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.heart-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  animation: fly 3s infinite ease-in-out;
+}
+
+.heart {
+  font-size: 2.5rem;
+  animation: beat 1s infinite;
+}
+
+.arrow {
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  font-size: 2rem;
+  color: #ff1493;
+  transform: rotate(-30deg);
+}
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes fly {
+  0% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+  100% { transform: translate(-50%, 0); }
+}
