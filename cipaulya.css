@@ -1,84 +1,63 @@
 body {
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #fff0f5;
-}
-
-.header {
-  background-color: #ff69b4;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 32px;
-  font-weight: bold;
+  padding: 0;
+  background: linear-gradient(to right, #ffe6f0, #ffe6fa);
   font-family: 'Comic Sans MS', cursive, sans-serif;
-  letter-spacing: 2px;
-  text-shadow: 2px 2px #ffb6c1;
-}
-
-.menu {
-  background-color: #ffb6c1;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-weight: bold;
-}
-
-.main {
   display: flex;
-  background-color: #ffe4e1;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.sidebar {
-  background-color: #ffc0cb;
-  color: white;
-  flex: 1;
-  padding: 20px;
+.container {
   text-align: center;
-  font-weight: bold;
+  position: relative;
 }
 
-.content {
-  background-color: #ffdde1;
-  color: #d63384;
-  flex: 2;
-  padding: 20px;
-  text-align: center;
-  font-weight: bold;
+.lovyu-text {
+  font-size: 4rem;
+  color: pink;
+  text-shadow: 2px 2px 4px white;
+  animation: pop 2s infinite alternate;
 }
 
-.footer {
-  background-color: #ff69b4;
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-weight: bold;
+@keyframes pop {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
 }
 
-@media (max-width: 768px) {
-  .main {
-    flex-direction: column;
-  }
+.heart-arrow {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 20px;
+  animation: fly 3s infinite ease-in-out;
 }
 
 .heart {
-  position: fixed;
-  top: -10px;
-  font-size: 24px;
-  color: #ff69b4;
-  animation: fall 5s linear infinite;
-  z-index: 1000;
-  user-select: none;
-  pointer-events: none;
+  font-size: 2.5rem;
+  animation: beat 1s infinite;
 }
 
-@keyframes fall {
-  0% {
-    transform: translateY(-10px) rotate(0deg);
-    opacity: 1;
-  }
-  100% {
-    transform: translateY(100vh) rotate(360deg);
-    opacity: 0;
-  }
+.arrow {
+  position: absolute;
+  left: -30px;
+  top: 5px;
+  font-size: 2rem;
+  color: #ff1493;
+  transform: rotate(-30deg);
 }
+
+@keyframes beat {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+@keyframes fly {
+  0% { transform: translate(-50%, 0); }
+  50% { transform: translate(-50%, -15px); }
+  100% { transform: translate(-50%, 0); }
+}
+
