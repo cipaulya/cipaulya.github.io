@@ -82,5 +82,26 @@
 
   <div class="footer">💘💘💘💘💘💘</div>
 
+  <script>
+  function createHeart() {
+    const heart = document.createElement('div');
+    heart.classList.add('heart');
+    heart.textContent = '❤️';
+
+    // Posisi horizontal acak
+    heart.style.left = Math.random() * 100 + 'vw';
+    // Ukuran acak
+    heart.style.fontSize = (Math.random() * 20 + 10) + 'px';
+    // Durasi animasi acak
+    heart.style.animationDuration = (Math.random() * 3 + 3) + 's';
+
+    document.body.appendChild(heart);
+
+    // Hapus setelah jatuh
+    setTimeout(() => {
+      heart.remove();
+    }, 5000);
+  }
+
 </body>
 </html>
