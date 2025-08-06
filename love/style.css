@@ -1,0 +1,27 @@
+body {
+  background-color: #ffe6f0;
+  font-family: 'Comic Sans MS', cursive;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.lovyu-text {
+  font-size: 48px;
+  color: pink;
+  text-shadow: 2px 2px 4px white;
+}
+
+.heart-arrow {
+  margin-top: 20px;
+}
+
+.heart, .arrow {
+  font-size: 40px;
+  display: inline-block;
+  animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
