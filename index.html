@@ -1,21 +1,86 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Struktur Layout</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Love U 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+    }
+
+    .header {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 32px;
+      font-weight: bold;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      letter-spacing: 2px;
+      text-shadow: 2px 2px #ffb6c1;
+    }
+
+    .menu {
+      background-color: #ffb6c1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    .main {
+      display: flex;
+      background-color: #ffe4e1;
+    }
+
+    .sidebar {
+      background-color: #ffc0cb;
+      color: white;
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .content {
+      background-color: #ffdde1;
+      color: #d63384;
+      flex: 2;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .footer {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
+
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header class="header">Header</header>
-    <nav class="nav">Menu Navigasi</nav>
-    
-    <div class="main">
-        <aside class="sidebar left">Sidebar</aside>
-        <section class="content">Content</section>
-        <aside class="sidebar right">Sidebar</aside>
-    </div>
 
-    <footer class="footer">Footer</footer>
+  <div class="header">Love U 💖</div>
+  <div class="menu">Menu Navigasi</div>
+
+  <div class="main">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Isi Cintaku Untukmu 💌</div>
+    <div class="sidebar">Sidebar</div>
+  </div>
+
+  <div class="footer">Footer Manis 💕</div>
+
 </body>
 </html>
