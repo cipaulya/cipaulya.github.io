@@ -1,53 +1,83 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Pinky</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f5;
+    }
 
-body {
-    background-color: black;
-    color: white;
-}
+    .header {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      font-size: 24px;
+      font-weight: bold;
+    }
 
-.header {
-    background-color: #c05e5e;
-    padding: 20px;
-    text-align: center;
-    font-size: 24px;
-}
+    .menu {
+      background-color: #ffb6c1;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
 
-.nav {
-    background-color: #6e3333;
-    padding: 15px;
-    text-align: center;
-    font-size: 18px;
-}
+    .main {
+      display: flex;
+      background-color: #ffe4e1;
+    }
 
-.main {
-    display: flex;
-    padding: 10px;
-    gap: 10px;
-}
+    .sidebar {
+      background-color: #ffc0cb;
+      color: white;
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
 
-.sidebar {
-    background-color: #ffb67a;
-    padding: 20px;
-    width: 20%;
-    text-align: center;
-}
+    .content {
+      background-color: #ffdde1;
+      color: #d63384;
+      flex: 2;
+      padding: 20px;
+      text-align: center;
+      font-weight: bold;
+    }
 
-.content {
-    background-color: #c05e5e;
-    padding: 20px;
-    width: 60%;
-    text-align: center;
-}
+    .footer {
+      background-color: #ff69b4;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+    }
 
-.footer {
-    background-color: #6e3333;
-    padding: 15px;
-    text-align: center;
-    font-size: 16px;
-    margin-top: 10px;
-}
+    @media (max-width: 768px) {
+      .main {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Header</div>
+  <div class="menu">Menu Navigasi</div>
+
+  <div class="main">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">Content</div>
+    <div class="sidebar">Sidebar</div>
+  </div>
+
+  <div class="footer">Footer</div>
+
+</body>
+</html>
