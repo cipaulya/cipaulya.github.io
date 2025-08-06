@@ -2,16 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Lovyu 💘</title>
-  <!-- Hubungkan ke CSS eksternal -->
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lovyu 💖</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      font-family: 'Comic Sans MS', cursive;
+      text-align: center;
+      padding-top: 100px;
+    }
+
+    .lovyu-text {
+      font-size: 48px;
+      color: pink;
+      text-shadow: 2px 2px 4px white;
+    }
+
+    .heart-arrow {
+      margin-top: 20px;
+    }
+
+    .heart, .arrow {
+      font-size: 40px;
+      display: inline-block;
+      animation: float 2s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+  </style>
+</head>
 <body>
-  <div class="container">
-    <h1 class="lovyu-text">lovyu 😽💖💕💘💞</h1>
-    <div class="heart-arrow">
-      <div class="heart">💘</div>
-      <div class="arrow">➶</div>
-    </div>
+  <div class="lovyu-text">
+    lovyu 🐱💖💕💘💞
+  </div>
+  <div class="heart-arrow">
+    <div class="heart">💘</div>
+    <div class="arrow">➶</div>
   </div>
 </body>
 </html>
+
