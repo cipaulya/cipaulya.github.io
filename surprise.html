@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Chat Surprise 💚</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #e5ddd5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      height: 100vh;
+      padding: 20px;
+    }
+
+    .chat-box {
+      width: 90%;
+      max-width: 400px;
+      background-color: #ffffff;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      overflow-y: auto;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .message {
+      max-width: 70%;
+      padding: 10px 15px;
+      margin: 10px;
+      border-radius: 15px;
+      font-size: 16px;
+      position: relative;
+    }
+
+    .message.user {
+      background-color: #dcf8c6;
+      align-self: flex-end;
+    }
+
+    .tap-area {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #25d366;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .tap-area:hover {
+      background-color: #1da851;
+    }
+  </style>
+</head>
+<body>
+  <div class="chat-box" id="chatBox">
+    <!-- Chat will appear here -->
+  </div>
+  <button class="tap-area" onclick="showNextMessage()">📩 Tap to Continue</button>
+
+  <script>
+    const messages = ["halo", "lovyu", "hay maniez"];
+    let currentIndex = 0;
+
+    function showNextMessage() {
+      if (currentIndex < messages.length) {
+        const chatBox = document.getElementById('chatBox');
+        const msg = document.createElement('div');
+        msg.className = 'message user';
+        msg.textContent = messages[currentIndex];
+        chatBox.appendChild(msg);
+        chatBox.scrollTop = chatBox.scrollHeight;
+        currentIndex++;
+      } else {
+        alert("abis ges");
+      }
+    }
+  </script>
+</body>
+</html>
